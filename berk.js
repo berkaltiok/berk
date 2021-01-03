@@ -10,10 +10,6 @@ var got           = require('got');
 var ww            = require('word-wrap');
 var c             = require('chalk');
 
-// var link = require('terminal-link');
-// var iq = require('inquirer');
-// var open = require("open");
-
 console.log("")
 got('https://avatars3.githubusercontent.com/u/17373485?s=600&v=4', { responseType: 'buffer' })
   .then((image) => terminalImage.buffer(image.body, { width: '26%' }))
