@@ -1,1 +1,1 @@
-console.log("Test!")
+console.log("Hi i'm Berk!")
