@@ -19,5 +19,7 @@
   "bugs": {
     "url": "https://github.com/berkaltiok/berk/issues"
   },
-  "homepage": "https://github.com/berkaltiok/berk#readme"
+  "homepage": "https://github.com/berkaltiok/berk#readme",
+  "dependencies": {},
+  "devDependencies": {}
 }
