@@ -1,0 +1,23 @@
+{
+  "name": "berk",
+  "version": "0.0.1",
+  "description": "Berk ALTIOK About",
+  "main": "berk.js",
+  "bin": {
+    "berk": "berk.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkaltiok/berk.git"
+  },
+  "keywords": [
+    "berk",
+    "berkaltiok"
+  ],
+  "author": "Berk ALTIOK",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/berkaltiok/berk/issues"
+  },
+  "homepage": "https://github.com/berkaltiok/berk#readme"
+}
