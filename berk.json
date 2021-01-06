@@ -1,3 +1,10 @@
 {
-  "title": "Hello, this is {bold.blue Berk ALTIOK!}"
+  "avatar": "https://avatars3.githubusercontent.com/u/17373485",
+  "title": "Hello, this is {bold.hex('#3b9aff') Berk Altıok!}",
+  "about": [
+    "Test 123",
+    "Test 123",
+    "Test 123",
+    "Test 123"
+  ]
 }
