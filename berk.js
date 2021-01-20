@@ -24,6 +24,7 @@ function openSocialSelector() {
       choices: [
         { name: chalk.bold.hex('#888888')(`💻  GitHub`), value: 'https://github.com/berkaltiok' },
         { name: chalk.bold.hex('#1DA1F2')(`🐦  Twitter`), value: 'https://twitter.com/berkpw' },
+        { name: chalk.bold.hex('#25D366')(`💬  Whatsapp`), value: 'https://whatsapp.berk.pw/' },
         { name: chalk.bold.hex('#D7CBFD')(`💼  Portfolio`), value: 'https://berkaltiok.github.io' },
         { name: chalk.bold.hex('#f04a45')('👋  Nope. Bye.'), value: false }
       ]
