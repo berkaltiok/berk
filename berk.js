@@ -15,6 +15,31 @@ const ww              =   require('word-wrap');
 const inquirer        =   require('inquirer');
 const open            =   require('open');
 
+function openSocialSelector() {
+  inquirer.prompt([
+    {
+      type: 'list',
+      message: 'For other things...',
+      name: 'link',
+      choices: [
+        { name: chalk.bold.hex('#888888')(`💻  GitHub`), value: 'https://github.com/berkaltiok' },
+        { name: chalk.bold.hex('#1DA1F2')(`🐦  Twitter`), value: 'https://twitter.com/berkpw' },
+        { name: chalk.bold.hex('#D7CBFD')(`💼  Portfolio`), value: 'https://berkaltiok.github.io' },
+        { name: chalk.bold.hex('#f04a45')('👋  Nope. Bye.'), value: false }
+      ]
+    }
+  ])
+  .then((result) => {
+    if (result.link) {
+      open(result.link);
+      openSocialSelector();
+    } else {
+      process.exit();
+    }
+  })
+  .catch(() => {});
+}
+
 console.log("")
 got(config.avatar, { responseType: 'buffer' })
   .then((image) => terminalImage.buffer(image.body, { width: '26%' }))
@@ -25,20 +50,6 @@ got(config.avatar, { responseType: 'buffer' })
   })
   .then(() => {
     console.log("\n")
-    inquirer.prompt([
-      {
-        type: 'list',
-        message: 'For other things...',
-        name: 'open',
-        choices: [
-          { name: chalk.bold.hex('#888888')(`💻  GitHub`), value: 'https://github.com/berkaltiok' },
-          { name: chalk.bold.hex('#1DA1F2')(`🐦  Twitter`), value: 'https://twitter.com/berkpw' },
-          { name: chalk.bold.hex('#D7CBFD')(`💼  Portfolio`), value: 'https://berkaltiok.github.io' },
-          { name: chalk.bold.hex('#f04a45')('👋  Nope. Bye.'), value: false }
-        ]
-      }
-    ])
-    .then((link) => { open(link.open); process.exit(); })
-    .catch(() => {});
+    openSocialSelector();
   })
   .catch((e) => console.log(e));
